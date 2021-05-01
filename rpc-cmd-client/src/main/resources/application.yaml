@@ -1,0 +1,27 @@
+# 应用名称
+spring:
+  application:
+    name: rpc-cmd-client
+  mvc:
+    static-path-pattern: /static/**
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 3000
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+cache:
+  expire_min: 10
